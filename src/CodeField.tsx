@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import {
   StyleProp,
   TextInput,
@@ -5,11 +7,10 @@ import {
   TextStyle,
   View,
 } from 'react-native';
-import * as React from 'react';
 import {getStyle, getSymbols} from './utils';
-import useFocusState from './useFocusState';
 
 import styles from './CodeField.styles';
+import useFocusState from './useFocusState';
 
 type Props = {
   rootStyle?: StyleProp<any>;
@@ -62,7 +63,6 @@ const CodeField = (
     <RootComponent {...RootProps} style={getStyle(styles.root, rootStyle)}>
       {cells}
       <TextInput
-        caretHidden
         disableFullscreenUI
         spellCheck={false}
         autoCorrect={false}
